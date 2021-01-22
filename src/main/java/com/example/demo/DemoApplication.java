@@ -1,10 +1,14 @@
 package com.example.demo;
 
 import com.example.demo.Data.Health;
+import com.example.demo.Data.User;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @SpringBootApplication
 @RestController
@@ -22,5 +26,12 @@ public class DemoApplication {
         return health;
     }
 
+    @GetMapping(path = "/users")
+    public List<User> users() {
+        List<User> userList = new ArrayList<>();
+        User user = new User("jack", 15, "India");
+        userList.add(user);
+        return userList;
+    }
 
 }
