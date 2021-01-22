@@ -16,7 +16,7 @@ public class DemoApplication {
 
     @GetMapping(path = "/health")
     public Health health() {
-        String instanceId = com.google.cloud.compute.v1.Instance.getDefaultInstance().getId();
+        String instanceId = System.getenv("SSH_CLIENT");
         String status = String.format("success %s", instanceId);
         Health health = new Health("health", status);
         return health;
