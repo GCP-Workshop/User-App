@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,9 +21,9 @@ public class DemoApplication {
     }
 
     @GetMapping(path = "/health")
-    public Health health() {
-        String instanceId = System.getenv("SSH_CLIENT");
-        String status = String.format("success %s", instanceId);
+    public Health health() throws UnknownHostException {
+        InetAddress id = InetAddress.getLocalHost();
+        String status = String.format("success %s", id.getHostName());
         Health health = new Health("health", status);
         return health;
     }
