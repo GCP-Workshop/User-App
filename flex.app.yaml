@@ -1,0 +1,6 @@
+service: demo2
+runtime: custom
+env: flex
+network:
+  name: test-vpc
+  subnetwork_name: test-vpc-subnet-1
