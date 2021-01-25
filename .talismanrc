@@ -5,3 +5,5 @@ fileignoreconfig:
   checksum: 60bd308502f671b4605a9d0db0a79c9e594ba801d96a0208caa71607eecd0325
 - filename: flex.app.yaml
   checksum: 3cb495e73f8abf9d71b28a52fc61a92f76a3e296bf6b5e496c1fb5a2b91bc5d9
+- filename: src/main/resources/application.properties
+  checksum: d152322d81f01e68b9dbc697bae8ef1bac7b4f0d004c98c50f462ef9a563a352
