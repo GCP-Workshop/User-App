@@ -1,21 +1,32 @@
 package com.example.demo.Data;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "user_db")
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
 
+    @Id
+    @JsonProperty("id")
+    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     @JsonProperty("name")
-    String name;
+    @Column(name = "name", nullable = false)
+    private String name;
 
     @JsonProperty("age")
-    int age;
+    @Column(name = "age", nullable = false)
+    private int age;
 
     @JsonProperty("place")
-    String place;
-
-    public User(String name, int age, String place) {
-        this.name = name;
-        this.age = age;
-        this.place = place;
-    }
+    @Column(name = "place", nullable = false)
+    private String place;
 }
