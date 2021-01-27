@@ -7,3 +7,5 @@ fileignoreconfig:
   checksum: 3cb495e73f8abf9d71b28a52fc61a92f76a3e296bf6b5e496c1fb5a2b91bc5d9
 - filename: src/main/resources/application.properties
   checksum: d152322d81f01e68b9dbc697bae8ef1bac7b4f0d004c98c50f462ef9a563a352
+- filename: src/main/resources/application.properties
+  checksum: e67dc62865a044446a3bf14bb955aeb183315dcd2ef070b19809abaa9442af82
