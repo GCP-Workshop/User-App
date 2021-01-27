@@ -3,7 +3,6 @@ package com.example.demo;
 import com.example.demo.Data.Health;
 import com.example.demo.Data.User;
 import com.example.demo.repository.UserRepository;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -37,6 +36,17 @@ public class DemoApplication {
         String status = String.format("success %s", id.getHostName());
         Health health = new Health("health", status);
         logger.info("status of health check " + status);
+        return health;
+    }
+
+    @GetMapping(path = "/health-down")
+    public Health healthDown() throws UnknownHostException {
+        logger.info("Request received to log error");
+        InetAddress id = InetAddress.getLocalHost();
+        String status = String.format("failure %s", id.getHostName());
+        Health health = new Health("health", status);
+        logger.warning("health check fail " + status);
+        logger.severe("health check fail " + status);
         return health;
     }
 
