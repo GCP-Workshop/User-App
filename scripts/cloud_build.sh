@@ -1,0 +1,1 @@
+gcloud builds submit --tag eu.gcr.io/otto-university-302315/demorun:2

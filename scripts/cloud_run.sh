@@ -1,0 +1,1 @@
+gcloud run deploy --image eu.gcr.io/otto-university-302315/demorun:2 --platform managed --service-account cloud-run-acc@otto-university-302315.iam.gserviceaccount.com
