@@ -1,4 +1,4 @@
- gcloud --project=otto-university-302315 beta sql instances create initdb --region=europe-west3 --network=test-vpc --no-assign-ip
+gcloud --project=otto-university-302315 beta sql instances create initdb --region=europe-west3 --network=test-vpc --no-assign-ip
 gcloud sql databases create users --instance=initdb
 export DB_IP=$(gcloud sql instances describe initdb --project otto-university-302315 --format 'value(ipAddresses.ipAddress)')
 
