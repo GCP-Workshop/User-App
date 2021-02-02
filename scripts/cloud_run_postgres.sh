@@ -5,8 +5,8 @@ export DB_IP=$(gcloud sql instances describe initdb --project otto-university-30
 gcloud run deploy user-app --image eu.gcr.io/otto-university-302315/demorun3:2 \
   --platform managed \
   --service-account cloud-run-acc@otto-university-302315.iam.gserviceaccount.com \
-  --vpc-connector test-vpc \
-  --add-cloudsql-instances otto-university-302315:europe-west3:testdb \
-  --update-env-vars POSTGRES_HOST=localhost,POSTGRES_USERNAME=postgres,POSTGRES_PASS=admin \
+  --vpc-connector vpcconnector1 \
+  --add-cloudsql-instances otto-university-302315:europe-west3:initdb \
+  --update-env-vars POSTGRES_HOST=10.179.50.3,POSTGRES_USERNAME=postgres,POSTGRES_PASS=test@123 \
   --region europe-west3 \
   --allow-unauthenticated
