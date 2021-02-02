@@ -9,3 +9,9 @@ fileignoreconfig:
   checksum: d152322d81f01e68b9dbc697bae8ef1bac7b4f0d004c98c50f462ef9a563a352
 - filename: src/main/resources/application.properties
   checksum: e67dc62865a044446a3bf14bb955aeb183315dcd2ef070b19809abaa9442af82
+- filename: build.gradle
+  checksum: 63771fd150dfd5a731eb576b1670bea546d350bbac6fbbdd6c46006a807eebe8
+- filename: src/main/resources/application.properties
+  checksum: f407597735e0c13d9819e3ea951d532af973a478007453c4553d8e8a0db4484a
+- filename: scripts/secret_manager.sh
+  checksum: c147f7c9ca2493227f9c632f338fbcdf7cebdf62ac9794e7755c116f2e84095f
