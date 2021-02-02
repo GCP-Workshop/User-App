@@ -15,3 +15,5 @@ fileignoreconfig:
   checksum: f407597735e0c13d9819e3ea951d532af973a478007453c4553d8e8a0db4484a
 - filename: scripts/secret_manager.sh
   checksum: c147f7c9ca2493227f9c632f338fbcdf7cebdf62ac9794e7755c116f2e84095f
+- filename: scripts/secret_manager.sh
+  checksum: 9517a733aae76a2b9f39bfb646b732f130ea7b6003000327a80ffe050a3d98f3
