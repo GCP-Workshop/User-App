@@ -1,5 +1,5 @@
 steps:
-# Build the docker container image
+# Build the container image
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'eu.gcr.io/otto-university-302315/demorun3:10', '.']
 # Push the container image to Container Registry
