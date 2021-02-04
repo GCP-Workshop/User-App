@@ -9,3 +9,5 @@ gcloud run deploy user-app --image eu.gcr.io/otto-university-302315/demorun3:9 \
   --add-cloudsql-instances otto-university-302315:europe-west3:thirddb \
   --region europe-west3 \
   --allow-unauthenticated
+  --no-traffic
+gcloud run services update-traffic user-app --to-revisions LATEST=10
