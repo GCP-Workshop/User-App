@@ -34,7 +34,7 @@ public class DemoApplication {
         logger.info("Request received to check health");
         InetAddress id = InetAddress.getLocalHost();
         String status = String.format("success %s", id.getHostName());
-        Health health = new Health("health latest", status);
+        Health health = new Health("health check", status);
         logger.info("status of health check " + status);
         return health;
     }
