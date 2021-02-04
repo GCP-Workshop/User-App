@@ -1,0 +1,11 @@
+steps:
+# Build the docker container image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'eu.gcr.io/otto-university-302315/demorun3:10', '.']
+# Push the container image to Container Registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'eu.gcr.io/otto-university-302315/demorun3:10']
+# Deploy container image to Cloud Run
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
+  args: ['run', 'deploy', 'user-app','--service-account', 'cloud-run-acc@otto-university-302315.iam.gserviceaccount.com', '--image', 'eu.gcr.io/otto-university-302315/demorun3:10', '--region', 'europe-west3', '--platform', 'managed']
