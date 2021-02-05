@@ -8,4 +8,4 @@ steps:
 # Deploy container image to Cloud Run
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: gcloud
-  args: ['run', 'deploy', 'user-app','--service-account', 'cloud-run-acc@otto-university-302315.iam.gserviceaccount.com', '--image', 'eu.gcr.io/otto-university-302315/demorun3:10', '--region', 'europe-west3', '--platform', 'managed','--vpc-connector', 'vpcconnector1' , '--add-cloudsql-instances', 'thriddb','--no-traffic', '--allow-unauthenticated']
+  args: ['run', 'deploy', 'user-app','--service-account', 'cloud-run-acc@otto-university-302315.iam.gserviceaccount.com', '--image', 'eu.gcr.io/otto-university-302315/demorun3:10', '--region', 'europe-west3', '--platform', 'managed','--vpc-connector', 'vpcconnector1' ,'--memory','1G' , '--add-cloudsql-instances', 'thriddb','--no-traffic', '--allow-unauthenticated']
